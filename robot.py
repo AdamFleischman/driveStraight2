@@ -1,5 +1,5 @@
 from drivetrain import Drivetrain
-from wpilib import Joystick
+from drivestraight import DriveStraight
 import os
 import wpilib
 from wpilib import TimedRobot
@@ -7,13 +7,11 @@ from wpilib import TimedRobot
 
 class MyRobot(TimedRobot):  # this is the controller
     def robotInit(self):  # something
-        self.controller = Joystick(0)
         self.drivetrain = Drivetrain()
+        self.autonomous_controller = DriveStraight(self.drivetrain, 2)
 
-    def teleopPeriodic(self):
-        forward = self.controller.getRawAxis(0)
-        rotate = self.controller.getRawAxis(1)
-        self.drivetrain.move(forward, rotate)
+    def autonomousPeriodic(self):
+        self.autonomous_controller.controller.run()
         # pull controller
         # invoke drivetrain, move
 
