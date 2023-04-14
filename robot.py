@@ -14,7 +14,6 @@ class MyRobot(TimedRobot):  # this is the controller
         forward = self.controller.getRawAxis(0)
         rotate = self.controller.getRawAxis(1)
         self.drivetrain.move(forward, rotate)
-        self.linefollower.run()
         # pull controller
         # invoke drivetrain, move
 

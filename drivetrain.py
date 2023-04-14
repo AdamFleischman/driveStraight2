@@ -1,6 +1,7 @@
 from wpilib import Spark
 from wpilib.drive import DifferentialDrive
 
+
 class Drivetrain:
     def __init__(self):
         self.left_motor = Spark(0)
