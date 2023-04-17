@@ -9,4 +9,4 @@ class Drivetrain:
         self.drivetrain = DifferentialDrive(self.left_motor, self.right_motor)
 
     def move(self, forward, rotate):
-        self.drivetrain.arcadeDrive(forward, rotate)
+        self.drivetrain.arcadeDrive(rotate, forward)

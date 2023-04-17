@@ -11,7 +11,7 @@ class MyRobot(TimedRobot):  # this is the controller
         self.autonomous_controller = DriveStraight(self.drivetrain, 2)
 
     def autonomousPeriodic(self):
-        self.autonomous_controller.controller.run()
+        self.autonomous_controller.run()
         # pull controller
         # invoke drivetrain, move
 
