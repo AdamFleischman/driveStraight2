@@ -13,9 +13,4 @@ class Drivetrain:
         self.right_encoder.setDistancePerPulse(0.07 * math.pi / (12 * 120))
 
     def move(self, forward, rotate):
-
-        self.drivetrain.arcadeDrive(rotate, forward)
-
-    def checkEncoders(self):
-        return f"Left: {self.left_encoder.getDistance()}\nRight: {self.right_encoder.getDistance()}"
-
+        self.drivetrain.arcadeDrive(forward, rotate)

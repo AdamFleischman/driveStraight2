@@ -9,11 +9,9 @@ class MyRobot(TimedRobot):  # this is the controller
     def robotInit(self):  # something
         self.drivetrain = Drivetrain()
         self.autonomous_controller = DriveStraight(self.drivetrain, 2)
-        print(self.autonomous_controller.drivetrain.checkEncoders())
 
     def autonomousPeriodic(self):
         self.autonomous_controller.run()
-        print(self.autonomous_controller.drivetrain.checkEncoders())
         # pull controller
         # invoke drivetrain, move
 
